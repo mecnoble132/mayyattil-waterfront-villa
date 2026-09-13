@@ -1944,12 +1944,13 @@ nav.primary ul a.active-nav::after {
 }
 
 .space-jump {
-  position: sticky;
-  top: 74px;
-  z-index: 90;
-  background: var(--green-dark);
-  border-bottom: 1px solid rgba(244, 237, 217, 0.12);
-}
+    position: sticky;
+    top: 74px;
+    z-index: 90;
+    background: var(--green-dark);
+    border-bottom: 1px solid rgba(244, 237, 217, 0.12);
+    padding: 8px 0;
+  }
 .space-jump-inner {
   display: flex;
   align-items: center;
@@ -2148,7 +2149,79 @@ nav.primary ul a.active-nav::after {
     height: 280px;
   }
   .space-jump {
-    top: 70px;
+    top: 74px;
+    padding: 8px 0;
+  }
+  .space-jump-inner {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+  .space-jump a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border-radius: 20px;
+    background: rgba(244, 237, 217, 0.1);
+    color: rgba(244, 237, 217, 0.85);
+    border: 1px solid rgba(244, 237, 217, 0.15);
+    transition: all 0.25s ease;
+  }
+  .space-jump a:hover {
+    color: var(--ivory);
+    background: var(--green);
+    border-color: var(--green);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(44, 64, 53, 0.25);
+  }
+
+  .villa-hero {
+    min-height: 65vh;
+    padding: 52px 24px 56px;
+  }
+  .villa-hero h1 {
+    font-size: clamp(28px, 4.8vw, 40px);
+  }
+  .villa-hero p {
+    font-size: 15.5px;
+    max-width: 480px;
+  }
+
+  .villa-plan {
+    padding: 60px 0 40px;
+  }
+  .villa-plan-head h2 {
+    font-size: clamp(26px, 3.8vw, 36px);
+  }
+
+  .villa-rhythm {
+    padding: 80px 0;
+  }
+  .villa-rhythm h2 {
+    font-size: clamp(24px, 3.8vw, 34px);
+  }
+  .rhythm-block {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(244, 237, 217, 0.1);
+  }
+
+  .space-chapter-copy p {
+    max-width: 480px;
+  }
+
+  .about-cta {
+    padding: 80px 0;
+  }
+  .cta-card {
+    padding: 48px 32px;
   }
 }
 
@@ -2161,18 +2234,188 @@ nav.primary ul a.active-nav::after {
   .estate-spine {
     grid-template-columns: 1fr;
   }
+  .spine-stop img {
+    height: 200px !important;
+  }
+  .space-jump {
+    position: sticky;
+    top: 74px;
+    padding: 8px 0;
+  }
   .space-jump-inner {
-    padding: 0 12px;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-padding: 0 16px;
+  }
+  .space-jump-inner::-webkit-scrollbar {
+    display: none;
   }
   .space-jump a {
-    padding: 12px 10px;
-    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgba(244, 237, 217, 0.1);
+    color: rgba(244, 237, 217, 0.85);
+    border: 1px solid rgba(244, 237, 217, 0.15);
+    transition: all 0.25s ease;
+  }
+  .space-jump a:hover,
+  .space-jump a:active {
+    color: var(--ivory);
+    background: var(--green);
+    border-color: var(--green);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(44, 64, 53, 0.25);
   }
   .space-chapter {
     scroll-margin-top: 128px;
   }
   .space-chapter-copy p {
     max-width: 340px;
+  }
+  .space-chapter-media {
+    height: 260px;
+  }
+  .space-chapter-copy h2 {
+    font-size: clamp(22px, 5.5vw, 28px);
+  }
+
+  .villa-hero {
+    min-height: 56vh;
+    padding: 48px 20px 52px;
+  }
+  .villa-hero .about-hero-inner {
+    max-width: 100%;
+  }
+  .villa-hero .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .villa-hero .eyebrow svg {
+    width: 20px;
+    height: 8px;
+  }
+  .villa-hero .eyebrow span {
+    white-space: normal;
+    line-height: 1.35;
+    text-align: center;
+  }
+  .villa-hero h1 {
+    font-size: clamp(24px, 6vw, 32px);
+    line-height: 1.24;
+    margin-bottom: 14px;
+    text-wrap: balance;
+  }
+  .villa-hero p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    max-width: 340px;
+    margin: 0 auto 22px;
+    text-wrap: pretty;
+  }
+
+  .villa-rhythm {
+    padding: 60px 0;
+  }
+  .villa-rhythm h2 {
+    font-size: clamp(22px, 5.5vw, 28px);
+    margin-bottom: 32px;
+  }
+  .rhythm-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .rhythm-block {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(244, 237, 217, 0.1);
+  }
+  .rhythm-block h3 {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+  .rhythm-block p {
+    font-size: 14.5px;
+    line-height: 1.65;
+  }
+
+  .villa-plan {
+    padding: 48px 0 32px;
+  }
+  .villa-plan-head {
+    margin-bottom: 32px;
+  }
+  .villa-plan-head h2 {
+    font-size: clamp(22px, 5.5vw, 28px);
+  }
+  .villa-plan-head p {
+    font-size: 14.5px;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .estate-spine {
+    gap: 16px;
+  }
+  .spine-stop {
+    text-align: center;
+  }
+  .spine-from {
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+  }
+  .spine-stop strong {
+    font-size: 18px;
+  }
+  .spine-stop span:last-child {
+    font-size: 13px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .about-cta {
+    padding: 60px 0;
+  }
+  .cta-card {
+    padding: 32px 20px;
+  }
+  .cta-card h2 {
+    font-size: clamp(22px, 5.5vw, 28px);
+  }
+  .cta-card p {
+    font-size: 14.5px;
+    max-width: 320px;
+    margin: 0 auto 24px;
+  }
+  .cta-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .cta-actions .btn {
+    width: 100%;
+    max-width: 320px;
   }
 }
