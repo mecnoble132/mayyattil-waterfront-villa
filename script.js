@@ -211,61 +211,61 @@ const villaSpaces = [
   {
     title: "Master Waterfront Suite",
     badge: "Sanctuary",
-    desc: "Spacious, fully air-conditioned master suite overlooking the gentle backwaters, featuring a bespoke king-size bed, handcrafted teak finishes, private sunrise balcony, and dedicated luxury dressing area.",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=85",
+    desc: "The principal bedroom looks toward the water. A king bed sits under teak finishes, with wall-to-wall sliding glass doors opening to sweeping river views. Dressing space is generous, and the suite stays fully air-conditioned through Kerala’s warm afternoons.",
+    image: "images/used_under_700kb/master-waterfront-suite-bedroom.webp",
     specs: [
-      { icon: "bed", text: "King Waterfront Bed" },
-      { icon: "sun", text: "Private Sunrise Balcony" },
-      { icon: "bath", text: "En-suite Rain Bath" },
-      { icon: "sparkles", text: "Teak Dressing Suite" }
+      { icon: "bed", text: "King waterfront bed" },
+      { icon: "sun", text: "Panoramic glass doors" },
+      { icon: "sparkles", text: "Teak dressing suite" },
+      { icon: "wind", text: "Full AC comfort" }
     ]
   },
   {
-    title: "Living & Dining Pavilion",
+    title: "Air-Conditioned Living Lounge",
     badge: "Gathering",
-    desc: "An expansive, air-conditioned open-plan lounge connecting directly to the waterfront veranda, complete with a handcrafted 10-seater family dining table, plush seating, and panoramic backwater breezes.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85",
+    desc: "The climate-controlled social heart of the house, featuring plush sofa seating, floor-to-ceiling windows overlooking the riverfront garden, and a seamless connection to the outdoor veranda.",
+    image: "images/used_under_700kb/living-lounge-sofa.webp",
     specs: [
-      { icon: "armchair", text: "Air-Conditioned Lounge" },
-      { icon: "wind", text: "Waterfront Veranda" },
-      { icon: "utensils", text: "10-Seater Dining Area" },
-      { icon: "coffee", text: "Butler Pantry Access" }
+      { icon: "armchair", text: "Air-conditioned lounge" },
+      { icon: "wind", text: "Garden & river view" },
+      { icon: "utensils", text: "Family dining area" },
+      { icon: "sparkles", text: "Ambient lighting" }
     ]
   },
   {
-    title: "Private Pool & Sun Deck",
-    badge: "Wellness",
-    desc: "Your 100% private swimming pool situated directly on the water's edge, framed by cushioned teak sun loungers, tropical palms, and crystal-clear filtered water.",
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=85",
+    title: "Open-Air Veranda & Sit-Out",
+    badge: "Outdoor Living",
+    desc: "A shaded tropical veranda equipped with ceiling fans and comfortable wicker lounge seating. Steps lead directly onto the lush lawns, offering a tranquil spot for morning coffee or afternoon breezes.",
+    image: "images/used_under_700kb/open-air-veranda-sitout.webp",
     specs: [
-      { icon: "waves", text: "100% Private Pool" },
-      { icon: "sun", text: "Cushioned Sun Loungers" },
-      { icon: "sparkles", text: "Crystal-Clear Water" },
-      { icon: "sunset", text: "Sunset Deck Views" }
+      { icon: "sun", text: "Shaded tropical veranda" },
+      { icon: "wind", text: "Overhead ceiling fans" },
+      { icon: "armchair", text: "Wicker sit-out seating" },
+      { icon: "trees", text: "Direct garden access" }
     ]
   },
   {
-    title: "Tropical Ensuite Bath",
-    badge: "Indulgence",
-    desc: "A spa-inspired bathroom sanctuary featuring a deep soaking stone tub, invigorating rainfall shower, lush botanical greenery, and premium organic bath amenities.",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=85",
+    title: "Private Riverside Deck & Water Steps",
+    badge: "Waterfront",
+    desc: "Dedicated timber steps and a waterfront deck platform built right on the edge of the Narakkal backwaters. Ideal for morning tea, casting a fishing line, or watching the sunset over the quiet water.",
+    image: "images/used_under_700kb/riverside-deck-water-steps.webp",
     specs: [
-      { icon: "bath", text: "Deep Soaking Stone Tub" },
-      { icon: "cloud-rain", text: "Open Rainfall Shower" },
-      { icon: "flower-2", text: "Botanical Greenery" },
-      { icon: "sparkles", text: "Natural Stone Vanity" }
+      { icon: "waves", text: "Direct water's edge" },
+      { icon: "sunset", text: "Sunset viewing deck" },
+      { icon: "anchor", text: "Backwater fishing spot" },
+      { icon: "flame", text: "Evening lantern deck" }
     ]
   },
   {
-    title: "Riverside Lawn & Sunset Bank",
-    badge: "Nature",
-    desc: "Manicured emerald lawns extending to the backwater edge under coconut canopies, perfect for serene morning yoga, high-tea sunsets, and private waterfront starlit dinners.",
-    image: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=85",
+    title: "Modern Kitchenette & Coffee Bar",
+    badge: "Refreshment",
+    desc: "A stylish private kitchenette complete with coffee maker, electric kettle, induction cooktop, and high-stool bar seating. Perfect for brewing fresh morning tea, preparing snacks, or hosting evening drinks.",
+    image: "images/used_under_700kb/kitchenette-pantry-counter.webp",
     specs: [
-      { icon: "trees", text: "Emerald Backwater Lawns" },
-      { icon: "sunset", text: "Sunset High-Tea Deck" },
-      { icon: "compass", text: "Direct Waterfront Access" },
-      { icon: "flame", text: "Evening Starlit Lounge" }
+      { icon: "coffee", text: "Espresso & tea station" },
+      { icon: "flame", text: "Induction cooktop" },
+      { icon: "utensils", text: "High-stool bar counter" },
+      { icon: "sparkles", text: "Modern pantry amenities" }
     ]
   }
 ];
@@ -497,8 +497,132 @@ if (document.getElementById('tPrev') && document.getElementById('tNext')) {
   });
 })();
 
+// ============ GALLERY LIGHTBOX POPUP MODAL ============
+function initGalleryLightbox() {
+  const modal = document.getElementById('galleryModal');
+  const overlay = document.getElementById('galleryModalOverlay');
+  const closeBtn = document.getElementById('galleryModalClose');
+  const prevBtn = document.getElementById('galleryModalPrev');
+  const nextBtn = document.getElementById('galleryModalNext');
+  const modalImg = document.getElementById('galleryModalImg');
+  const modalTag = document.getElementById('galleryModalTag');
+  const modalTitle = document.getElementById('galleryModalTitle');
+
+  if (!modal || !modalImg) return;
+
+  let galleryItems = [];
+  let currentIndex = 0;
+
+  function collectItems() {
+    galleryItems = [];
+    
+    // Check gallery page brick cards first
+    const brickCards = document.querySelectorAll('.gallery-brick-card');
+    if (brickCards.length > 0) {
+      brickCards.forEach((card, idx) => {
+        const img = card.querySelector('img');
+        const tag = card.querySelector('.gallery-tag');
+        const title = card.querySelector('.gallery-title');
+        if (img) {
+          galleryItems.push({
+            src: img.getAttribute('src') || img.src,
+            tag: tag ? tag.textContent.trim() : 'Gallery Sanctuary',
+            title: title ? title.textContent.trim() : (img.alt || 'Mayyattil Waterfront Villa')
+          });
+          card.addEventListener('click', () => openModal(idx));
+        }
+      });
+      return;
+    }
+
+    // Check homepage gallery carousel items
+    const carouselItems = document.querySelectorAll('.gallery-carousel .gallery-item');
+    if (carouselItems.length > 0) {
+      carouselItems.forEach((item, idx) => {
+        let src = item.getAttribute('data-src') || item.getAttribute('href');
+        if (!src || src === '#') {
+          const bg = item.style.backgroundImage || window.getComputedStyle(item).backgroundImage;
+          if (bg && bg !== 'none') {
+            src = bg.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+          }
+        }
+        const ariaLabel = item.getAttribute('aria-label') || 'Gallery Photo';
+        galleryItems.push({
+          src: src,
+          tag: 'Waterfront Sanctuary',
+          title: ariaLabel
+        });
+        item.addEventListener('click', (e) => {
+          if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+          openModal(idx);
+        });
+      });
+    }
+  }
+
+  function renderModal(index) {
+    if (!galleryItems[index]) return;
+    const item = galleryItems[index];
+
+    modalImg.style.opacity = '0';
+    setTimeout(() => {
+      modalImg.src = item.src;
+      modalImg.alt = item.title;
+      if (modalTag) modalTag.textContent = item.tag;
+      if (modalTitle) modalTitle.textContent = item.title;
+      modalImg.style.opacity = '1';
+    }, 120);
+  }
+
+  function openModal(index) {
+    currentIndex = index;
+    renderModal(currentIndex);
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    document.body.classList.remove('modal-open');
+  }
+
+  function showNext() {
+    if (galleryItems.length === 0) return;
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    renderModal(currentIndex);
+  }
+
+  function showPrev() {
+    if (galleryItems.length === 0) return;
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    renderModal(currentIndex);
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (overlay) overlay.addEventListener('click', closeModal);
+  if (prevBtn) prevBtn.addEventListener('click', showPrev);
+  if (nextBtn) nextBtn.addEventListener('click', showNext);
+
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('is-open')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'ArrowLeft') showPrev();
+  });
+
+  collectItems();
+}
+
+initGalleryLightbox();
+
 // Initialize Lucide Icons
 if (typeof lucide !== 'undefined') {
   lucide.createIcons();
 }
-
