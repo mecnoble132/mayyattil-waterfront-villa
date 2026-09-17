@@ -1,4 +1,26 @@
+// ============ PAGE LOADER ============
+(function () {
+  const loader = document.getElementById('page-loader');
+  if (!loader) return;
+
+  function hideLoader() {
+    loader.classList.add('loader-hidden');
+    // Remove from DOM after fade completes to free resources
+    setTimeout(() => { loader.remove(); }, 600);
+  }
+
+  // Hide once everything (images, fonts) has loaded
+  if (document.readyState === 'complete') {
+    hideLoader();
+  } else {
+    window.addEventListener('load', hideLoader, { once: true });
+    // Safety fallback — never show loader for more than 4s
+    setTimeout(hideLoader, 4000);
+  }
+})();
+
 // Initialize Lenis Smooth Inertia Scroll for ultra-smooth 60fps/120fps scrolling
+
 if (typeof Lenis !== 'undefined') {
   const lenis = new Lenis({
     duration: 1.2,
