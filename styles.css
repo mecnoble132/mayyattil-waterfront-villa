@@ -2189,15 +2189,8 @@ nav.primary ul a.active-nav::after {
   }
 
   .villa-hero {
-    min-height: 65vh;
-    padding: 52px 24px 56px;
-  }
-  .villa-hero h1 {
-    font-size: clamp(28px, 4.8vw, 40px);
-  }
-  .villa-hero p {
-    font-size: 15.5px;
-    max-width: 480px;
+    min-height: 48vh;
+    padding: 60px 24px;
   }
 
   .villa-plan {
@@ -2306,38 +2299,7 @@ nav.primary ul a.active-nav::after {
 
   .villa-hero {
     min-height: 38vh;
-    padding: 36px 20px 40px;
-  }
-  .villa-hero .about-hero-inner {
-    max-width: 100%;
-  }
-  .villa-hero .eyebrow {
-    font-size: 11px;
-    letter-spacing: 1.2px;
-    gap: 8px;
-    margin-bottom: 14px;
-  }
-  .villa-hero .eyebrow svg {
-    width: 20px;
-    height: 8px;
-  }
-  .villa-hero .eyebrow span {
-    white-space: normal;
-    line-height: 1.35;
-    text-align: center;
-  }
-  .villa-hero h1 {
-    font-size: clamp(24px, 6vw, 32px);
-    line-height: 1.24;
-    margin-bottom: 14px;
-    text-wrap: balance;
-  }
-  .villa-hero p {
-    font-size: 14.5px;
-    line-height: 1.6;
-    max-width: 340px;
-    margin: 0 auto 22px;
-    text-wrap: pretty;
+    padding: 40px 20px;
   }
 
   .villa-rhythm {
