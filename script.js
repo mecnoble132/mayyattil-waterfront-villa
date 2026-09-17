@@ -19,8 +19,8 @@
     hideLoader();
   } else {
     window.addEventListener('load', hideLoader, { once: true });
-    // Safety fallback — never show loader for more than 5s
-    setTimeout(hideLoader, 5000);
+    // Safety fallback — never show loader for more than 2.5s
+    setTimeout(hideLoader, 2500);
   }
 })();
 
