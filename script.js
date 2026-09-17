@@ -3,19 +3,24 @@
   const loader = document.getElementById('page-loader');
   if (!loader) return;
 
+  const MIN_DISPLAY = 1000; // always show for at least 1 second
+  const startTime = Date.now();
+
   function hideLoader() {
-    loader.classList.add('loader-hidden');
-    // Remove from DOM after fade completes to free resources
-    setTimeout(() => { loader.remove(); }, 600);
+    const elapsed = Date.now() - startTime;
+    const remaining = Math.max(0, MIN_DISPLAY - elapsed);
+    setTimeout(() => {
+      loader.classList.add('loader-hidden');
+      setTimeout(() => { loader.remove(); }, 600);
+    }, remaining);
   }
 
-  // Hide once everything (images, fonts) has loaded
   if (document.readyState === 'complete') {
     hideLoader();
   } else {
     window.addEventListener('load', hideLoader, { once: true });
-    // Safety fallback — never show loader for more than 4s
-    setTimeout(hideLoader, 4000);
+    // Safety fallback — never show loader for more than 5s
+    setTimeout(hideLoader, 5000);
   }
 })();
 
