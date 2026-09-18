@@ -8,7 +8,7 @@ This document serves as the project rulebook and architectural reference for AI 
 - **Brand Name**: Mayyattil Waterfront Villa
 - **Property Concept**: Exclusive Single Private Riverfront Villa (Whole-Estate Buyout Only — 1 Private Group/Family per stay, No separate rooms/resort accommodations)
 - **Location**: Kerala, India
-- **Contact**: `+91 98765 43210` | `mayyattil@gmail.com`
+- **Contact**: `+91 94958 40641` | `mayyattilwaterfrontvila@gmail.com` | [Instagram](https://www.instagram.com/mayyattil_waterfront_villa)
 - **Tech Stack**: Vanilla HTML5, Vanilla CSS3, Vanilla JavaScript (ES6+), Lenis Smooth Scroll, Lucide Icons
 
 ---

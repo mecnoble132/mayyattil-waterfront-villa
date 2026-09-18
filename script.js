@@ -514,7 +514,7 @@ if (document.getElementById('tPrev') && document.getElementById('tNext')) {
     const formattedIn = formatDateDisplay(checkInVal);
     const formattedOut = formatDateDisplay(checkOutVal);
 
-    const phone = '919876543210';
+    const phone = '919495840641';
     const message = `Hello Mayyattil Waterfront Villa! 🌴\nI would like to check availability for an exclusive private stay.\n\n📅 Check-in: ${formattedIn}\n📅 Check-out: ${formattedOut}\n👥 Guests: ${adultsVal} Adult(s), ${childrenVal} Child(ren)\n\nPlease confirm live availability and pricing for our stay.`;
 
     const encodedMsg = encodeURIComponent(message);
