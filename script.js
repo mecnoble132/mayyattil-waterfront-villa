@@ -358,7 +358,7 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=12"
   },
   {
-    quote: "A flawless waterfront escape. Having the entire villa and private pool completely to ourselves was pure luxury. The kids loved the open lawns and play area, and being just minutes from the toddy pub and Cherai Beach gave us the perfect balance of relaxation and adventure.",
+    quote: "A flawless waterfront escape. Having the entire villa and riverside deck completely to ourselves was pure luxury. The kids loved the open lawns and play area, and being just minutes from the toddy pub and Cherai Beach gave us the perfect balance of relaxation and adventure.",
     name: "Anjali Menon",
     loc: "Bengaluru",
     avatar: "https://i.pravatar.cc/150?img=47"

@@ -85,5 +85,5 @@ Keep files strictly separated into their dedicated concerns:
 7. **Strictly Single Private Villa (No Multi-Room Resort Concepts)**:
    - The property is strictly a single, private riverfront villa offered exclusively to one guest party at a time.
    - Never reintroduce separate rentable rooms, multiple villa categories, or hotel-style accommodations.
-   - The primary showcase section represents "The Villa Spaces" (the interconnected living areas of the single villa: Master Suite, Living & Dining Pavilion, Private Pool & Sun Deck, Tropical Ensuite Bath, Riverside Lawn & Sunset Bank).
+   - The primary showcase section represents "The Villa Spaces" (the interconnected living areas of the single villa: Master Waterfront Suite, Air-Conditioned Living Lounge, Open-Air Veranda & Sit-Out, Private Riverside Deck & Water Steps, Modern Kitchenette & Coffee Bar). There is no swimming pool on the property — the villa sits directly on the water, and guests access the river via the riverside deck and water steps.
    - Navigation and buttons must use "The Villa" and "Reserve Villa" instead of "Rooms" or "Book Now".
