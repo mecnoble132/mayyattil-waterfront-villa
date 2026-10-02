@@ -22,6 +22,10 @@ Keep files strictly separated into their dedicated concerns:
 | **`index.html`** | Semantic HTML structure, meta tags, and component layouts. No inline CSS or embedded `<script>` blocks. |
 | **`styles.css`** | CSS variables, typography, animations, responsive breakpoints, and component styling. |
 | **`script.js`** | Interactive behaviors (Lenis scroll engine, mobile navigation menu toggle, testimonial carousel slider, Lucide icon initialization). |
+| **`availability.js`** | Public live-availability calendar, nearby-date suggestions, booking-request form → WhatsApp. |
+| **`calendar.js`** | Shared month-grid calendar (`window.VillaCal`) used by the site and admin. |
+| **`admin.html` / `admin.js`** | Private owner page (noindex, unlinked) to block/unblock dates; Supabase email login. |
+| **`supabase-config.js`** | Supabase URL + anon key. **`supabase/schema.sql`**: `blocked_dates` table + RLS (public read, owner-only write). A blocked date = an occupied night; check-out day stays free. |
 | **`logo.jpg`** | Official circular brand logo mark. |
 | **`ref.PNG`** | Design reference mockup for layout aesthetics. |
 

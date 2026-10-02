@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 <link rel="preload" as="image" href="images/used_under_700kb/private-waterfront-villa-hero.webp" fetchpriority="high">
 </head>
 <body>
@@ -135,64 +135,87 @@
           <i data-lucide="shield-check"></i> Direct Estate Buyout Inquiry
         </span>
         <h2>Check Villa Availability</h2>
-        <p>Select your dates and guest count to inquire live via WhatsApp, or <a href="https://www.airbnb.co.in/rooms/1775262449811734618?source_impression_id=p3_1789731895_P3s9SN-P3XVc2qrf" target="_blank" rel="noopener noreferrer" class="airbnb-inline-link">view our listing on Airbnb <i data-lucide="external-link"></i></a>.</p>
+        <p>See live availability, pick your dates and send a booking request on WhatsApp, or <a href="https://www.airbnb.co.in/rooms/1775262449811734618?source_impression_id=p3_1789731895_P3s9SN-P3XVc2qrf" target="_blank" rel="noopener noreferrer" class="airbnb-inline-link">view our listing on Airbnb <i data-lucide="external-link"></i></a>.</p>
       </div>
-      <form id="availabilityForm" class="availability-form">
-        <div class="form-group">
-          <label for="checkInDate">
-            <i data-lucide="calendar"></i> Check-in Date
-          </label>
-          <input type="date" id="checkInDate" required class="form-input">
-        </div>
-        
-        <div class="form-group">
-          <label for="checkOutDate">
-            <i data-lucide="calendar"></i> Check-out Date
-          </label>
-          <input type="date" id="checkOutDate" required class="form-input">
-        </div>
-        
-        <div class="form-group">
-          <label>
-            <i data-lucide="users"></i> Adults (12+ yrs)
-          </label>
-          <div class="counter-control">
-            <button type="button" class="counter-btn" id="adultsDecr" aria-label="Decrease Adults">
-              <i data-lucide="minus"></i>
-            </button>
-            <span class="counter-value" id="adultsVal">2</span>
-            <button type="button" class="counter-btn" id="adultsIncr" aria-label="Increase Adults">
-              <i data-lucide="plus"></i>
-            </button>
-            <input type="hidden" id="adultsCount" value="2">
+
+      <div class="avail-layout">
+        <div class="avail-calendar">
+          <div id="availCalendar"></div>
+          <div class="cal-legend">
+            <span><i class="legend-dot legend-free"></i> Available</span>
+            <span><i class="legend-dot legend-booked"></i> Booked</span>
+            <span><i class="legend-dot legend-selected"></i> Your stay</span>
           </div>
         </div>
 
-        <div class="form-group">
-          <label>
-            <i data-lucide="baby"></i> Children (0-11 yrs)
-          </label>
-          <div class="counter-control">
-            <button type="button" class="counter-btn" id="childrenDecr" aria-label="Decrease Children">
-              <i data-lucide="minus"></i>
-            </button>
-            <span class="counter-value" id="childrenVal">0</span>
-            <button type="button" class="counter-btn" id="childrenIncr" aria-label="Increase Children">
-              <i data-lucide="plus"></i>
-            </button>
-            <input type="hidden" id="childrenCount" value="0">
+        <div class="avail-side">
+          <div class="avail-summary">
+            <div><span>Check-in</span><strong id="summaryIn">—</strong></div>
+            <div><span>Check-out</span><strong id="summaryOut">—</strong></div>
+            <div><span>Stay</span><strong id="summaryNights">—</strong></div>
+            <button type="button" class="avail-clear" id="availClear" hidden>Clear</button>
           </div>
-        </div>
 
-        <div class="form-group form-group-btn">
-          <button type="submit" id="checkAvailBtn" class="btn btn-whatsapp">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <div class="avail-banner is-info" id="availBanner" role="status" aria-live="polite">
+            <i id="availBannerIcon" data-lucide="calendar"></i>
+            <p id="availBannerText">Select your check-in date, then your check-out date.</p>
+          </div>
+
+          <div class="avail-suggest" id="availSuggest" hidden>
+            <p>Nearby available dates</p>
+            <div class="suggest-chips" id="suggestChips"></div>
+          </div>
+
+          <form id="availabilityForm" class="availability-form" hidden>
+            <div class="form-group">
+              <label for="guestName"><i data-lucide="user"></i> Your Name</label>
+              <input type="text" id="guestName" class="form-input" required autocomplete="name" placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label for="guestPhone"><i data-lucide="phone"></i> Phone / WhatsApp</label>
+              <input type="tel" id="guestPhone" class="form-input" required autocomplete="tel" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label>
+                <i data-lucide="users"></i> Adults (12+ yrs)
+              </label>
+              <div class="counter-control">
+                <button type="button" class="counter-btn" id="adultsDecr" aria-label="Decrease Adults">
+                  <i data-lucide="minus"></i>
+                </button>
+                <span class="counter-value" id="adultsVal">2</span>
+                <button type="button" class="counter-btn" id="adultsIncr" aria-label="Increase Adults">
+                  <i data-lucide="plus"></i>
+                </button>
+                <input type="hidden" id="adultsCount" value="2">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>
+                <i data-lucide="baby"></i> Children (0-11 yrs)
+              </label>
+              <div class="counter-control">
+                <button type="button" class="counter-btn" id="childrenDecr" aria-label="Decrease Children">
+                  <i data-lucide="minus"></i>
+                </button>
+                <span class="counter-value" id="childrenVal">0</span>
+                <button type="button" class="counter-btn" id="childrenIncr" aria-label="Increase Children">
+                  <i data-lucide="plus"></i>
+                </button>
+                <input type="hidden" id="childrenCount" value="0">
+              </div>
+            </div>
+            <div class="form-group form-group-btn form-group-wide">
+              <button type="submit" id="checkAvailBtn" class="btn btn-whatsapp">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
               <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.122.553 4.116 1.517 5.852L.057 24l6.305-1.654a11.954 11.954 0 0 0 5.669 1.439c6.646 0 12.031-5.385 12.031-12.031C24.062 5.385 18.677 0 12.031 0zm0 21.785a9.71 9.71 0 0 1-4.962-1.362l-.356-.211-3.69.968.985-3.596-.232-.37a9.715 9.715 0 0 1-1.493-5.183c0-5.38 4.378-9.758 9.758-9.758 2.607 0 5.057 1.016 6.9 2.86a9.704 9.704 0 0 1 2.858 6.898c0 5.38-4.378 9.758-9.768 9.758zm5.347-7.319c-.293-.147-1.734-.856-2.003-.954-.269-.098-.465-.147-.66.147-.196.293-.758.954-.93 1.15-.171.196-.343.22-.636.073-.293-.147-1.238-.456-2.358-1.455-.871-.777-1.459-1.737-1.63-2.031-.171-.293-.018-.452.128-.598.132-.132.293-.342.44-.513.147-.171.196-.293.293-.489.098-.196.049-.367-.024-.513-.073-.147-.66-1.59-.904-2.176-.238-.57-.48-.493-.66-.502l-.563-.01c-.196 0-.513.073-.782.367s-1.027 1.002-1.027 2.445c0 1.442 1.051 2.836 1.198 3.032.147.196 2.068 3.158 5.011 4.428.7.303 1.247.484 1.673.62.703.224 1.343.193 1.849.117.564-.085 1.734-.709 1.979-1.393.244-.685.244-1.272.171-1.393-.073-.122-.269-.196-.562-.343z"/>
             </svg>
-            <span>Reserve Villa</span>
-          </button>
+                <span>Reserve Villa</span>
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </section>
@@ -658,6 +681,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
-<script src="script.js?v=2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="calendar.js"></script>
+<script src="script.js?v=3"></script>
+<script src="availability.js"></script>
 </body>
 </html>
